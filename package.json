@@ -3,16 +3,24 @@
   "version": "0.1.1",
   "private": true,
   "scripts": {
+    "functions": "cp ./functions/* ./out_functions",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "postbuild": "next-on-netlify"
+    "postbuild": "next-on-netlify && cp ./functions/* ./out_functions"
   },
   "dependencies": {
+    "faunadb": "^3.0.1",
     "next": "^9.5.4",
     "next-on-netlify": "^2.5.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
